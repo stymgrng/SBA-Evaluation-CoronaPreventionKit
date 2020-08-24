@@ -12,6 +12,26 @@
 
 <%-- Required View Template --%>
 
+	<%
+		if(session.getAttribute("adminId")==null)
+			response.sendRedirect("errorPage.jsp");
+			
+	%>
+
+
+<form action="admin?action=insertproduct" method="post">
+	<div>
+		<div><label>Enter Product Name</label> <input type="text" name="pname"></div>
+		<br/>
+		<div><label>Enter Product Description</label> <input type="text" name="pdesc"></div>
+		<br/>
+		<div><label>Enter Product Price</label> <input type="text" name="pcost"></div>
+		<br>
+		<div> <input type="submit" value="Add"> </div>
+	</div>
+</form>
+
+
 <hr/>	
 	<jsp:include page="footer.jsp"/>
 </body>

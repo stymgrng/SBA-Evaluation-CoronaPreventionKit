@@ -10,10 +10,13 @@
 <jsp:include page="header.jsp"/>
 <hr/>
 	<div>
-		<h3>Something went wrong! We regret the inconvenience!</h3>
+		<h3>Something has gone wrong or you entered the wrong details!</h3>
 		<p>Error Message : <%=exception.getMessage()%> </p>
 		<p>Please Contact Administrator</p>
 	</div>
+	
+	<a href="index.jsp"><button>Go Back to Home Page</button></a>
+	
 <hr/>	
 	<jsp:include page="footer.jsp"/>
 </body>
